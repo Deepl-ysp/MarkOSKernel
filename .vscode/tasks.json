@@ -1,0 +1,100 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build UEFI Application",
+            "type": "shell",
+            "command": "make",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "make all - build src/main.cpp into main.efi"
+        },
+        {
+            "label": "Build (verbose)",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "V=1"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "make V=1 - verbose build output"
+        },
+        {
+            "label": "Build for ia32 (32-bit)",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "ARCH=ia32"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "make ARCH=ia32 - cross-compile for 32-bit UEFI"
+        },
+        {
+            "label": "Show Build Configuration",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "info"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "make info - print compiler, flags, and paths"
+        },
+        {
+            "label": "Clean Build Artifacts",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "make clean - remove build/ directory"
+        },
+        {
+            "label": "Build gnu-efi Library",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "gnuefi"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "make gnuefi - build crt0 + libgnuefi.a"
+        },
+        {
+            "label": "Run in QEMU (UEFI)",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "run"
+            ],
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "make run - boot main.efi in QEMU with OVMF firmware"
+        },
+        {
+            "label": "Run in QEMU (Windows batch)",
+            "type": "shell",
+            "command": "tools\\run.bat",
+            "args": [],
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Run UEFI app in QEMU via batch script"
+        }
+    ]
+}

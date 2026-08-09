@@ -1,0 +1,19 @@
+{
+    "root":{
+        "user":{
+            "permission":["root.p","user1.p"],
+            "root":{},
+            "user1":{}
+        },
+        "home":{
+            "root":{},
+            "user1":{}
+        },
+        "bin":{},
+        "usr":{},
+        "var":{},
+        "dev":{},
+        "boot":{},
+        "res":{}
+    }
+}

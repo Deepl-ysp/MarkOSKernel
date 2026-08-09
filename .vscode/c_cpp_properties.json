@@ -1,0 +1,75 @@
+{
+    "configurations": [
+        {
+            "name": "UEFI (x86_64)",
+            "includePath": [
+                "${workspaceFolder}/efi/inc",
+                "${workspaceFolder}/efi/inc/x86_64",
+                "${workspaceFolder}/efi/inc/protocol",
+                "${workspaceFolder}/efi/inc/internal",
+                "${workspaceFolder}/efi/inc/legacy",
+                "${workspaceFolder}/efi/inc/subst",
+                "${workspaceFolder}/efi/inc/ia32",
+                "${workspaceFolder}/efi/inc/aarch64",
+                "${workspaceFolder}/efi/inc/arm",
+                "${workspaceFolder}/efi/inc/riscv64",
+                "${workspaceFolder}/efi/inc/loongarch64",
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/include"
+            ],
+            "defines": [
+                "CONFIG_x86_64",
+                "GNU_EFI_USE_MS_ABI",
+                "__x86_64__",
+                "_GNU_EFI",
+                "_GNU_EFI_4_0"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "gnu++11",
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "UEFI (ia32)",
+            "includePath": [
+                "${workspaceFolder}/efi/inc",
+                "${workspaceFolder}/efi/inc/ia32",
+                "${workspaceFolder}/efi/inc/protocol",
+                "${workspaceFolder}/efi/inc/internal",
+                "${workspaceFolder}/efi/inc/legacy",
+                "${workspaceFolder}/efi/inc/subst",
+                "${workspaceFolder}/src"
+            ],
+            "defines": [
+                "CONFIG_ia32",
+                "__i386__",
+                "_GNU_EFI",
+                "_GNU_EFI_4_0"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "gnu++11",
+            "intelliSenseMode": "gcc-x86"
+        },
+        {
+            "name": "UEFI (aarch64)",
+            "includePath": [
+                "${workspaceFolder}/efi/inc",
+                "${workspaceFolder}/efi/inc/aarch64",
+                "${workspaceFolder}/efi/inc/protocol",
+                "${workspaceFolder}/efi/inc/internal",
+                "${workspaceFolder}/efi/inc/legacy",
+                "${workspaceFolder}/efi/inc/subst",
+                "${workspaceFolder}/src"
+            ],
+            "defines": [
+                "CONFIG_aarch64",
+                "__aarch64__",
+                "_GNU_EFI",
+                "_GNU_EFI_4_0"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "gnu++11",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}
