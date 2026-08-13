@@ -1,5 +1,7 @@
+/.vscode
 /build
 /efi
 /tools
+/tests
 /versions
 push.cmd
